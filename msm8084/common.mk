@@ -39,8 +39,8 @@ endif
 
 common_flags += -D__STDC_FORMAT_MACROS
 
-common_deps  :=
-kernel_includes :=
+common_deps  += $(BOARD_KERNEL_HEADER_DEPENDENCIES)
+kernel_includes += $(BOARD_KERNEL_HEADER_DIR)
 
 # Executed only on QCOM BSPs
 ifeq ($(TARGET_USES_QCOM_BSP),true)
